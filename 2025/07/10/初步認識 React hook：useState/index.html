@@ -4,17 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>前端小日子</title>
+  <title>初步認識 React hook：useState | 前端小日子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="記錄轉職過程，包含學習網頁設計和前端程式">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端小日子">
-<meta property="og:url" content="https://angela0117.github.io/Angela-blog/index.html">
+  <meta name="description" content="1. 什麼是 useState？useState 是 React hooks 的一種，以下為用法介紹： 1. 用來在「函式型元件」中建立和管理狀態（state）2. 類似資料的概念，可以定義為瞬間的狀態：計數器、輸入框內容、開關狀態等3. 只要狀態改變，畫面會自動重新渲染4. 每個 useState 都是獨立的：可以在同一個元件中使用多個 useState5. 狀態值可以是任何型別：數字、字串、布">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初步認識 React hook：useState">
+<meta property="og:url" content="https://angela0117.github.io/Angela-blog/2025/07/10/%E5%88%9D%E6%AD%A5%E8%AA%8D%E8%AD%98%20React%20hook%EF%BC%9AuseState/index.html">
 <meta property="og:site_name" content="前端小日子">
-<meta property="og:description" content="記錄轉職過程，包含學習網頁設計和前端程式">
+<meta property="og:description" content="1. 什麼是 useState？useState 是 React hooks 的一種，以下為用法介紹： 1. 用來在「函式型元件」中建立和管理狀態（state）2. 類似資料的概念，可以定義為瞬間的狀態：計數器、輸入框內容、開關狀態等3. 只要狀態改變，畫面會自動重新渲染4. 每個 useState 都是獨立的：可以在同一個元件中使用多個 useState5. 狀態值可以是任何型別：數字、字串、布">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-07-10T08:42:59.000Z">
+<meta property="article:modified_time" content="2025-07-11T04:30:11.629Z">
 <meta property="article:author" content="Angela Huang">
-<meta property="article:tag" content="前端,網頁設計,轉職,自學轉職,軟體工程師">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="學習">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/Angela-blog/atom.xml" title="前端小日子" type="application/atom+xml">
@@ -78,55 +81,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hook-useRef" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/Angela-blog/2025/07/10/hook-useRef/" class="article-date">
-  <time class="dt-published" datetime="2025-07-10T08:42:59.000Z" itemprop="datePublished">2025-07-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/Angela-blog/2025/07/10/hook-useRef/">初步認識 React hook：useRef</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="1-什麼是-useRef？"><a href="#1-什麼是-useRef？" class="headerlink" title="1. 什麼是 useRef？"></a>1. 什麼是 useRef？</h2><p>useRef 是 React hooks 的一種，主要的功能為：</p>
-<p><strong>1. 透過 <code>useRef()</code> 抓取 DOM 元素（類似 JS 的 querySelector）</strong><br><strong>2. 不受 <code>useState()</code> 的生命週期影響，透過 <code>useRef()</code> 保存特定值，但不影響畫面 re-render</strong><br><strong>3. 所有用 <code>useRef()</code> 建的變數，都要 <code>.current</code> 才能拿到 DOM</strong></p>
-        
-          <p class="article-more-link">
-            <a href="/Angela-blog/2025/07/10/hook-useRef/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://angela0117.github.io/Angela-blog/2025/07/10/hook-useRef/" data-id="cmcyfzhbq00018gt83yty8j8x" data-title="初步認識 React hook：useRef" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/React/" rel="tag">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/%E5%AD%B8%E7%BF%92/" rel="tag">學習</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-初步認識 React hook：useState" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-初步認識 React hook：useState" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/Angela-blog/2025/07/10/%E5%88%9D%E6%AD%A5%E8%AA%8D%E8%AD%98%20React%20hook%EF%BC%9AuseState/" class="article-date">
   <time class="dt-published" datetime="2025-07-10T08:42:59.000Z" itemprop="datePublished">2025-07-10</time>
@@ -139,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/Angela-blog/2025/07/10/%E5%88%9D%E6%AD%A5%E8%AA%8D%E8%AD%98%20React%20hook%EF%BC%9AuseState/">初步認識 React hook：useState</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      初步認識 React hook：useState
     </h1>
   
 
@@ -150,11 +105,65 @@
       
         <h2 id="1-什麼是-useState？"><a href="#1-什麼是-useState？" class="headerlink" title="1. 什麼是 useState？"></a>1. 什麼是 useState？</h2><p>useState 是 React hooks 的一種，以下為用法介紹：</p>
 <p><strong>1. 用來在「函式型元件」中建立和管理狀態（state）</strong><br><strong>2. 類似資料的概念，可以定義為瞬間的狀態：</strong>計數器、輸入框內容、開關狀態等<br><strong>3. 只要狀態改變，畫面會自動重新渲染</strong><br><strong>4. 每個 useState 都是獨立的：</strong>可以在同一個元件中使用多個 useState<br><strong>5. 狀態值可以是任何型別：</strong>數字、字串、布林、物件、陣列都可以<br><strong>6. 不能在條件判斷、迴圈中使用：</strong>需要放在元件最外層(return之前)，通常會放在元件中最上方<br><strong>7. 初始值只會設定一次：</strong>即使重新渲染也不會重新執行 useState(初始值)</p>
-        
-          <p class="article-more-link">
-            <a href="/Angela-blog/2025/07/10/%E5%88%9D%E6%AD%A5%E8%AA%8D%E8%AD%98%20React%20hook%EF%BC%9AuseState/#more">Read More</a>
-          </p>
-        
+<span id="more"></span>
+
+<h2 id="2-useState-基本語法"><a href="#2-useState-基本語法" class="headerlink" title="2. useState 基本語法"></a>2. useState 基本語法</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [state, setState] = <span class="title function_">useState</span>(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>變數宣告：</strong>使用 <code>useState</code> Hook 宣告一個名為 <code>state</code> 的狀態變數，初始值為 1</li>
+<li><strong>解構賦值：</strong>從 <code>useState</code> 回傳的陣列中取得兩個值：<br>  - <code>state</code>：目前的狀態值，初始值為 <code>1</code><br>  - <code>setState</code>：用於更新 <code>state</code> 的函式,呼叫 <code>setState</code> 會觸發元件重新渲染</li>
+<li><strong>初始值設定：</strong> <code>useState(1)</code> 中的參數 <code>1</code> 是 <code>state</code> 的初始值。這表示在元件首次渲染時，<code>state</code> 的值為 <code>1</code></li>
+<li><strong>更新狀態：</strong> 當需要更新 <code>state</code> 的值時，呼叫 <code>setState</code> 函式，並傳入新的值。<br>例如，<code>setState(2)</code> 會將 <code>state</code> 更新為 <code>2</code>，並觸發元件的重新渲染，以反映最新的狀態</li>
+</ul>
+<p>我請chatGPT給我一個好記的口訣😆： <span style="color:red;font-size:20px;"> 宣告狀態 → 改變狀態 → 自動更新畫面！</span></p>
+<h2 id="3-useState-的生命週期（Life-Cycle）"><a href="#3-useState-的生命週期（Life-Cycle）" class="headerlink" title="3. useState 的生命週期（Life Cycle）"></a>3. <code>useState</code> 的生命週期（Life Cycle）</h2><p><strong>A. 元件初始化（Initial Render）</strong></p>
+<ul>
+<li><code>useState</code>(初始值) 被執行一次</li>
+<li>建立「狀態變數」與「更新函式」</li>
+<li>初始值只執行一次，不會每次重新渲染時都重設初始值</li>
+</ul>
+<p><strong>B. 狀態被更新</strong></p>
+<ul>
+<li>呼叫 <code>setState</code> → 觸發元件重新渲染</li>
+<li>但 <code>useState()</code> 本身不會重新執行</li>
+<li>原本的狀態值會被保留下來（React 自動幫你管理）</li>
+</ul>
+<p><strong>C. 元件卸載（Unmount）</strong></p>
+<ul>
+<li>該元件從畫面中被移除時</li>
+<li>對應的狀態資料也會一起被銷毀（React 自動清理）</li>
+</ul>
+<p>✅ 圖解流程<br><code>useState()</code> 初始值設定 → 元件 render，畫面出現 → 使用 <code>setState </code>更新狀態 → React 重新 render，畫面更新 → 狀態仍保留，直到元件被卸載</p>
+<p>📢範例：計數器</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>); <span class="comment">// 生命週期開始：初始化為 0</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>目前計數：&#123;count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;+1<span class="tag">&lt;/<span class="name">button</span>&gt;</span> //每次點擊會讓 count +1 並觸發畫面更新</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解釋：</p>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>行為</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>初次 render</td>
+<td><code>count = 0</code>，畫面顯示 0</td>
+</tr>
+<tr>
+<td>點一次按鈕</td>
+<td>呼叫 <code>setCount(1)</code> → React 幫你更新狀態並重新渲染畫面</td>
+</tr>
+<tr>
+<td>再點一次</td>
+<td><code>count = 2</code>，畫面繼續更新</td>
+</tr>
+</tbody></table>
+<p>💡 <strong><span style="color:red;font-size:14px;"> <code>setState()</code> 會觸發 re-render，但不會重新跑 <code>useState()</code></span></strong><br>可以想像成：<br>有一個計分板，剛開始分數是 0（這是 <code>useState</code> 的初始值）<br>每次加分（<code>setState</code>）分數會變，計分板會顯示新分數（re-render）<br>但不會因為加分分數又自動回到 0（不會重新跑 <code>useState</code> 的初始值）</p>
+<h2 id="6-總結"><a href="#6-總結" class="headerlink" title="6. 總結"></a>6. 總結</h2><ol>
+<li><code>useState()</code> 初始值只在第一次執行，之後不會重跑</li>
+<li><code>setState()</code> 改變資料 → <code>React</code> 重新渲染畫面，但不會回到初始值</li>
+<li>每次渲染都是「新的畫面 + 保留的狀態」</li>
+<li>若狀態之間有依賴（像根據 A 狀態決定 B），可考慮搭配 <code>useEffect</code> 使用</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
@@ -167,52 +176,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-第二篇文章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/Angela-blog/2024/05/10/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" class="article-date">
-  <time class="dt-published" datetime="2024-05-10T07:22:00.000Z" itemprop="datePublished">2024-05-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/Angela-blog/2025/07/10/hook-useRef/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          初步認識 React hook：useRef
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/Angela-blog/2024/05/10/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/">體驗營心得</a>
-    </h1>
   
+    <a href="/Angela-blog/2024/05/10/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">體驗營心得</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="新手小白的心得"><a href="#新手小白的心得" class="headerlink" title="新手小白的心得"></a>新手小白的心得</h2><p>謝謝有機會參與體驗營，也謝謝老師、助教和同學們的教導，讓我在這幾週獲益良多，<br>目前全職學中雖然有點焦慮，但多虧每週直播的校長喊話，讓我有信心並且有前進的動力，<br>六角就像是個大家庭，每個人都無私的付出，讓新手倍感溫暖，<br>期許自己能持續學習，往轉職路上前進。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://angela0117.github.io/Angela-blog/2024/05/10/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="cmcyfzhbx00048gt85yc095s0" data-title="體驗營心得" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/React/" rel="tag">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/%E5%AD%B8%E7%BF%92/" rel="tag">學習</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Angela-blog/tags/%E6%97%A5%E8%A8%98/" rel="tag">日記</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
