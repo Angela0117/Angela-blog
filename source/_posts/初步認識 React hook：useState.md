@@ -63,7 +63,7 @@ function Counter() {
   return (
     <div>
       <p>目前計數：{count}</p>
-      <button onClick={() => setCount(count + 1)}>+1</button> //每次點擊會讓 count +1 並觸發畫面更新
+      <button onClick={() => setCount(count + 1)}>+1</button> 
     </div>
   );
 }
